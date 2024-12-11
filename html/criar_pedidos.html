@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pedido</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">Sistema de Gestão</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="listar_clientes.html">Lista de Clientes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="listar_pedidos.html">Lista de Pedidos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="criar_cliente.html">Cadastro de Cliente</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="criar_pedidos.html">Cadastro de Pedido</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    
+    <div class="container mt-5">
+        <h2 class="mb-4">Cadastro de Pedido</h2>
+        <form id="formPedido">
+            <div class="mb-3">
+                <label for="descricao" class="form-label">Descrição</label>
+                <input type="text" class="form-control" id="descricao" required>
+            </div>
+            <div class="mb-3">
+                <label for="valorTotal" class="form-label">Valor Total</label>
+                <input type="number" class="form-control" id="valorTotal" required>
+            </div>
+            <div class="mb-3">
+                <label for="status" class="form-label">Status</label>
+                <select class="form-control" id="status" required>
+                    <option value="Em Processamento">Em Processamento</option>
+                    <option value="Enviado">Enviado</option>
+                    <option value="Entregue">Entregue</option>
+                    <option value="Cancelado">Cancelado</option>
+                </select>
+            </div>
+            <div class="mb-3">
+                <label for="cliente" class="form-label">Cliente</label>
+                <select class="form-control" id="cliente" required>
+                    <!-- Lista de clientes será preenchida pelo JS -->
+                </select>
+            </div>
+            <button type="submit" class="btn btn-success">Salvar</button>
+            <a href="listar_pedidos.html" class="btn btn-secondary">Voltar</a>
+        </form>
+    </div>
+    <script src="../js/pedidos.js"></script>
+</body>
+</html>
